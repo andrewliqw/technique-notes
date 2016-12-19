@@ -1,4 +1,4 @@
-# technique-notes
+# Andrew Li's technique notes
 
 **Details are important.**  In the short term, just grasping your familiar
  programming language to start
