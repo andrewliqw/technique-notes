@@ -1,0 +1,25 @@
+{% extends "../base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>What is docker?</h1>
+    <p>One thing to remember: the docker container itself is Linux program. At this moment, there is no Windows program can be wrapped in the docker container.</p>
+
+    <h1>Docker command</h1>
+    <p><mark>docker version</mark>: display version</p>
+    <p><mark>docker images</mark>: list images.</p>
+    <p><mark>docker pull</mark>: downlaod image.</p>
+    <p><mark>docker ps</mark>: list containers.</p>
+    <p><mark>docker run</mark>: run command in container</p>
+    <p><mark>docker stop</mark>: stop running a container</p>
+    <p><mark>docker start</mark>: strat running a container</p>
+
+    <h1>Postgresql</h1>
+    <h3>installation</h3>
+    <p><mark>$ docker pull postgres</mark></p>
+    <h3>create a container of postgre server and run at the frist time</h3>
+    <p><mark>$ docker run --name postgres-andrew -d postgres </mark></p>
+    <h3>create a container to connect to postgre server</h3>
+    <p><mark>$ docker run -it --rm --link postgre-andrew:postgres postgres psql -h postgres -U postgres</mark></p>
+</div>
+{% endblock %}
