@@ -10,6 +10,18 @@ This git repository is used to record technical skills I used in my projects.
 Some skills are implemented by myself, some skills are implemented by others from
 internet.
 
+src
+  |--tempaltes
+       |--bootstrap
+       |--css
+       |--docker
+       |--javascript
+       |--jquery
+       |--macos
+       |--nodejs
+       |--programming_paradigm
+       |--vscode
+
 HTML files are used to present these technical skills. However, Python/Django
 Template Language (DTL) is used to generate these HTML files. By means of the 
 inheritance and block override in DTL, it is easier to DIRECTLY include a HTML
