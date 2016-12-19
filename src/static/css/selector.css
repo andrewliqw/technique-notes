@@ -1,0 +1,10 @@
+#attr-1 ~ p[class] {
+    color: red;
+}
+#attr-1 ~ p {
+    color: green;
+}
+
+p[class*="o b"] {
+    color: red;
+}

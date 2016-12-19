@@ -1,0 +1,42 @@
+{% extends "../base.html" %}
+
+{% block localsyntaxhighlighter %}
+<script src="{{ STATIC_URL}}lib/syntaxhighlighter/3.0.83/scripts/shBrushXml.js"></script>
+<script src="{{ STATIC_URL}}lib/syntaxhighlighter/3.0.83/scripts/shBrushCss.js"></script>
+{% endblock %}
+
+{% block localcss %}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/selector.css">
+{% endblock %}
+
+{% block content %}
+<h1>attribute selector</h1>
+
+<h3 id="attr-1">[attr] and [attr i]</h3>
+<pre class="brush: html">
+    &lt;p class="foo bar">This paragraph has class attribute&lt;/p>
+    &lt;p>This paragraph has NO class attribute&lt;/p>
+</pre>
+<pre class="brush: css">
+    p {
+        color: green;
+    }
+    p[class] {
+        color: red;
+    }
+</pre>
+<p class="foo bar">This paragraph has class attribute</p>
+<p>This paragraph has NO class attribute</p>
+
+<h3>[attr*=value]</h3>
+<p>Represents an element with an attribute name of attr and whose value contains at least one occurrence of string "value" as substring.</p>
+<pre class="brush: html">
+    &lt;p class="foo bar">[attr]&lt;/p>
+</pre>
+<pre class="brush: css">
+    p[class*="o b"] {
+        color: red;
+    }
+</pre>
+<p class="foo bar">[attr]</p>
+{% endblock %}
