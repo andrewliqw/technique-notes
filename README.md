@@ -22,4 +22,7 @@ $ python3 -m pip install django
 
 After install Django, using the following shell command to generate HTML file:
 
-$ python3 gen.py src/templates/index.html > src/index.html
+$ python3 gen.py src/templates/index_t.html > src/index.html
+
+Note: index.html is generated just for convenience, **src/templates** directory
+is the main source code.
