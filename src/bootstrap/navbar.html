@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+        <!-- jQuery must before bootstrap-->
+        <script src="../static/lib/jquery/jquery-1.12.3.min.js"></script>
+
+        <!-- bootstrp js -->
+        <script src="../static/lib/bootstrap/bootstrap3.3.7/js/bootstrap.min.js"></script>
+        <!-- bootstrap css -->
+        <link rel="stylesheet" href="../static/lib/bootstrap/bootstrap3.3.7/css/bootstrap.min.css">
+
+        <!-- SyntaxHighlighter -->
+        <script src="../static/lib/syntaxhighlighter/3.0.83/scripts/shCore.js"></script>
+        <link rel="stylesheet" href="../static/lib/syntaxhighlighter/3.0.83/styles/shCore.css">
+        <link rel="stylesheet" href="../static/lib/syntaxhighlighter/3.0.83/styles/shThemeDefault.css">
+        
+<script src="../static/lib/syntaxhighlighter/3.0.83/scripts/shBrushXml.js"></script>
+<script src="../static/lib/syntaxhighlighter/3.0.83/scripts/shBrushCss.js"></script>
+
+
+        <!-- local css -->
+        
+        
+    </head>
+    <body>
+        
+<h1>navbar html backbone</h1>
+<pre class="brush: html">
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+            </div>
+            <div class="navbar-collapse">
+            </div>
+        </div>
+    </nav>
+</pre>
+
+<h1>container class</h1>
+<pre class="brush: css">
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+</pre>
+
+<h1>navbar class</h1>
+<pre class="brush: css">
+nav {
+    display: block;
+}
+.navbar {
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+}
+@media (min-width: 768px) {
+  .navbar {
+    border-radius: 4px;
+  }
+}
+</pre>
+
+<h1>navbar-header and navbar-collapse class</h1>
+<p>In mobile, navbar-header is floated to left.</p>
+<pre class="brush: css">
+@media (min-width: 768px) {
+  .navbar-header {
+    float: left;
+  }
+}
+</pre>
+
+<p>
+<pre class="brush: css">
+.container > .navbar-header,
+.container-fluid > .navbar-header,
+.container > .navbar-collapse,
+.container-fluid > .navbar-collapse {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+</pre>
+
+<pre class="brush: css">
+    @media (min-width: 768px) {
+  .container > .navbar-header,
+  .container-fluid > .navbar-header,
+  .container > .navbar-collapse,
+  .container-fluid > .navbar-collapse {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+</pre>
+
+<h1>navbar-toggle inside navbar-header</h1>
+<pre class="brush: css">
+.navbar-toggle {
+  position: relative;
+  float: right;
+  padding: 9px 10px;
+  margin-top: 8px;
+  margin-right: 15px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.navbar-toggle:focus {
+  outline: 0;
+}
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+}
+.navbar-toggle .icon-bar + .icon-bar {
+  margin-top: 4px;
+}
+@media (min-width: 768px) {
+  .navbar-toggle {
+    display: none;
+  }
+}
+</pre>
+
+<h1>navbar-brand class</h1>
+<pre class="brush: css">
+.navbar-brand {
+  float: left;
+  height: 50px;
+  padding: 15px 15px;
+  font-size: 18px;
+  line-height: 20px;
+}
+.navbar-brand:hover,
+.navbar-brand:focus {
+  text-decoration: none;
+}
+.navbar-brand > img {
+  display: block;
+}
+@media (min-width: 768px) {
+  .navbar > .container .navbar-brand,
+  .navbar > .container-fluid .navbar-brand {
+    margin-left: -15px;
+  }
+}
+</pre>
+
+
+
+
+        
+        <script>SyntaxHighlighter.all()</script>
+        
+    </body>
+</html>

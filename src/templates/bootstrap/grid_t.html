@@ -1,0 +1,106 @@
+{% extends "../base.html" %}
+
+{% block localsyntaxhighlighter %}
+<script src="{{ STATIC_URL }}lib/syntaxhighlighter/3.0.83/scripts/shBrushXml.js"></script>
+<script src="{{ STATIC_URL }}lib/syntaxhighlighter/3.0.83/scripts/shBrushCss.js"></script>
+{% endblock %}
+
+{% block content %}
+<h1>container class</h1>
+<pre class="brush: css">
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+</pre>
+
+<h1>row class</h1>
+<pre class="brush: css">
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.row:before,
+.row:after {
+  display: table;
+  content: " ";
+}
+.row:after {
+  clear: both;
+}
+</pre>
+
+<p>Use rows to create horizontal groups of columns. Content should be placed within columns, and only columns may be immediate children of rows.</p>
+<p>Why? If there are some other elements, the 12 column size will be broken.</p>
+
+<h1>column for mobile</h1>
+<pre class="brush: css">
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.col-xs-12 {
+  width: 100%;
+}
+.col-xs-11 {
+  width: 91.66666667%;
+}
+.col-xs-10 {
+  width: 83.33333333%;
+}
+.col-xs-9 {
+  width: 75%;
+}
+.col-xs-8 {
+  width: 66.66666667%;
+}
+.col-xs-7 {
+  width: 58.33333333%;
+}
+.col-xs-6 {
+  width: 50%;
+}
+.col-xs-5 {
+  width: 41.66666667%;
+}
+.col-xs-4 {
+  width: 33.33333333%;
+}
+.col-xs-3 {
+  width: 25%;
+}
+.col-xs-2 {
+  width: 16.66666667%;
+}
+.col-xs-1 {
+  width: 8.33333333%;
+}
+</pre>
+{% endblock %}
+
