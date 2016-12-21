@@ -1,0 +1,30 @@
+{% extends "../base.html" %}
+
+{% block localsyntaxhighlighter %}
+<script src="{{ STATIC_URL }}lib/syntaxhighlighter/3.0.83/scripts/shBrushXml.js"></script>
+<script src="{{ STATIC_URL }}lib/syntaxhighlighter/3.0.83/scripts/shBrushCss.js"></script>
+{% endblock %}
+
+{% block localcss %}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/text_truncate.css">
+{% endblock %}
+
+{% block content %}
+<h1>Single line truncation</h1>
+<p>So you want to keep the text in one line, and if there is no enough space, truncating them and displaying ellipsis.</p>
+<h3>HTML code</h3>
+<pre class="brush: html">
+    &lt;p class="single-line-truncation">Some long long long long text&lt;/p>
+</pre>
+<h3>CSS code</h3>
+<pre class="brush: css">
+.single-line-truncation {
+    width: 3100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+</pre>
+<h3>And the result</h3>
+<p class="single-line-truncation">Some long long long long text</p>
+{% endblock %}
