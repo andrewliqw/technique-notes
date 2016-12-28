@@ -3,9 +3,62 @@
 {% block localsyntaxhighlighter %}
 <script src="{{ STATIC_URL }}lib/syntaxhighlighter/3.0.83/scripts/shBrushXml.js"></script>
 <script src="{{ STATIC_URL }}lib/syntaxhighlighter/3.0.83/scripts/shBrushCss.js"></script>
+<script src="{{ STATIC_URL }}lib/syntaxhighlighter/3.0.83/scripts/shBrushJScript.js"></script>
 {% endblock %}
 
 {% block content %}
+<h1>My technique skill using thumbnail</h1>
+<ul>
+  <li>add <mark>thumbnail</mark> class to the elements you want, the border will displayed for these elements.</li>
+  <li>In order to vertically align the elements inside thumbnail, using jquery matchHeight plugin to do it.
+    <ul>
+      <li>add a class name, e.g., equalheight-1 to the elements to be vertically aligned.</li>
+      <li>call the matchHeight plugin function.</li>
+    </ul>
+  </li>
+</ul>
+<pre class="brush: html">
+  &lt;div class="row">
+    &lt;div class="col-sm-4">
+      &lt;h1>thumbnail example 1&lt;/h1>
+      &lt;div class="thumbnail">
+        &lt;p class="equalheight-1">&lt;img src="/img/path" alt="">&lt;/p>
+        &lt;p class="equalheight-1-caption">Caption for the img 1&lt;/p>
+      &lt;/div>
+    &lt;/div>
+
+    &lt;div class="col-sm-4">
+      &lt;h1>thumbnail example 2&lt;/h1>
+      &lt;div class="thumbnail">
+        &lt;p class="equalheight-1">&lt;img src="/img/path" alt="">&lt;/p>
+        &lt;p class="equalheight-1-caption">Caption for the img 2&lt;/p>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
+</pre>
+<pre class="brush: js">
+  <script src="jquery.matchHeight-min.js"></script>
+  <script>
+  $(function() {
+    $('.equalheight-1').matchHeight({
+        byRow: true,
+        property: 'height',
+        target: null,
+        remove: false
+    });
+  });
+
+  $(function() {
+    $('.equalheight-1-caption').matchHeight({
+        byRow: true,
+        property: 'height',
+        target: null,
+        remove: false
+    });
+  });
+  </script>
+</pre>
+
 <h1>thumbnail class</h1>
 <pre class="brush: css">
 .thumbnail {
