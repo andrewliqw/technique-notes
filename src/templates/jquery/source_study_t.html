@@ -1,0 +1,44 @@
+{% extends "../base.html" %}
+
+{% block localsyntaxhighlighter %}
+<script src="{{ STATIC_URL }}lib/syntaxhighlighter/3.0.83/scripts/shBrushJScript.js"></script>
+<script src="{{ STATIC_URL }}lib/syntaxhighlighter/3.0.83/scripts/shBrushXml.js"></script>
+<script src="{{ STATIC_URL }}lib/syntaxhighlighter/3.0.83/scripts/shBrushCss.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>src/var directory</h1>
+    <p>The src/var directory includes some small javascript modules which can be exported to other javascript files using AMD define function.</p>
+
+    <h3>src/var/class2type.js</h3>
+    <p>This module exports <mark>class2type = {}</mark> to the including context.</p>
+    <pre class="brush: js">
+define(["var/class2type"], function(class2type){
+    // your code can reference class2type directly
+    // equal to: var class2type = {}
+});
+    </pre>
+
+    <h3>src/var/toString.js</h3>
+    <p>This module exports <mark>toString = ({}).toString</mark> to the including context.</p>
+    <pre class="brush: js">
+        define(["var/toString"], function(toString){
+            // your code can reference toString directly
+            // equal to: var toString = ({}).toString
+        });
+    </pre>
+
+    <h1>src/core.js</h1>
+    <h3>jQuery.extend function</h3>
+    <p>There are two forms to call this function</p>
+    <ul>
+        <li>jQuery.extend(object1, object2, ..., objectn)</li>
+        <li>jQuery.extend(true, object1, object2, ..., objectn)</li>
+    </ul>
+    <p>If there is only one argument, then the calling object is extended.</p>
+    <pre class="brush: js">
+        jQuery.extend({apple: 0, banana: { weight: 52, price: 100 }, cherry: 97}, {banana: { price: 200 }, durian: 100});
+        jQuery.extend(true, {apple: 0, banana: { weight: 52, price: 100 }, cherry: 97}, {banana: { price: 200 }, durian: 100});
+    </pre>
+{% endblock %}
