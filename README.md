@@ -1,14 +1,26 @@
 # Andrew Li's technique notes
 
+This git repository is used to record technical skills I used in my projects.
+Some skills are implemented by myself, some skills are implemented by others from
+internet.
+
 **Details are important.**  In the short term, just grasping your familiar
  programming language to start
 your project. With the accumulation of long-term experience of different projects,
 you can choose the best suitable tools for your project if you know the details. Furthermore, innovation
 is based on the understanding the advantage and disadvantage of the tools.
 
-This git repository is used to record technical skills I used in my projects.
-Some skills are implemented by myself, some skills are implemented by others from
-internet.
+## How to view these technique notes
+
+Note: You have to install 'docker' first to view these technique notes.
+
+```
+$ docker pull andrewliqw/technique-notes
+
+$ docker run -p8080:8080 --rm andrewliqw/technique-notes
+```
+
+Then, go to your favorate browser, enter http://localhost:8080/.
 
 ```
 src
