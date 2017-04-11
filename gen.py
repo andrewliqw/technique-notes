@@ -1,3 +1,4 @@
+from __future__ import absolute_import, unicode_literals, print_function
 import argparse
 import os
 import sys
@@ -10,20 +11,23 @@ parser.add_argument("template_file",
     # nargs="+",
     help="template file"
 )
-parser.add_argument("level",
-    type=int,
-    help="level of static directory relative to template file"
-)
+
+# parser.add_argument("level",
+#     type=int,
+#     help="level of static directory relative to template file"
+# )
+
 args = parser.parse_args()
 
-if args.level == 0:
-    static_url = "."
-elif args.level > 0:
-    static_url = "../" * args.level
-else:
-    raise ValueError("level should be >= 0")
+# if args.level == 0:
+#     static_url = "."
+# elif args.level > 0:
+#     static_url = "../" * args.level
+# else:
+#     raise ValueError("level should be >= 0")
 
-context = Context({"STATIC_URL": os.path.join(static_url, "static", "")})
+# context = Context({"STATIC_URL": os.path.join(static_url, "static", "")})
+context = Context({'STATIC_URL': '/static/'})
 
 django_engine = Engine(
     # dirs = ["templates"],
