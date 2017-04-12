@@ -22,6 +22,15 @@ $ docker run -p8080:8080 --rm andrewliqw/technique-notes
 
 Then, go to your favorate browser, enter http://localhost:8080/.
 
+If you want to generate your own docker image, here is the commands:
+
+```
+$ git clone https://github.com/andrewliqw/technique-notes.git
+$ cd technique-notes
+$ npm install
+$ bash ./docker_image.sh
+```
+
 ```
 src
   |--tempaltes
